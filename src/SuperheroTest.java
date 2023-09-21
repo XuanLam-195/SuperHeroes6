@@ -26,12 +26,13 @@ class SuperheroTest {
 
     @Test
     void testToString() {
-        String resultStringExpected = "\"\u001B[32m" + testHero.getName() + "\u001B[0m\"---" +
-                "\"" + testHero.getRealName() + "\"---" +
-                "\'\u001B[31m" + testHero.getSuperPower() + "\u001B[0m\'---" +
-                "Created in " + testHero.getYearCreated() +
-                "---Human: \"" + testHero.getIsHuman() +
-                "\"---Strength: " + testHero.getStrength();
+        String resultStringExpected =
+                "Superhero Name: " + testHero.getName() +
+                        "\nReal Name: " + testHero.getRealName() +
+                        "\nsuperPower: " + testHero.getSuperPower() +
+                        "\nyearCreate: " + testHero.getYearCreated() +
+                        "\nisHuman: " + testHero.getIsHuman() +
+                        "\nstrength: " + testHero.getStrength();
         assertEquals(resultStringExpected, testHero.toString());
     }
 }
