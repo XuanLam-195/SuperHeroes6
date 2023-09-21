@@ -44,6 +44,18 @@ public class Database {
         }
         return superheroList;
     }
+    public ArrayList<Superhero> searchSuperheroRealName(String name) {
+        ArrayList<Superhero> superheroList = new ArrayList<>();
+        for (Superhero superhero : superheroes) {
+            if (superhero.getRealName().toLowerCase().contains(name.toLowerCase())) {
+                if (!superheroList.contains(superhero.getRealName())) {
+                    superheroList.add(superhero);
+                }
+            }
+        }
+        return superheroList;
+    }
+
     public String toString() {
         String heroes = "";
         int counter = 0;
