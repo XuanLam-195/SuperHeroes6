@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    public void startProgram(){
+    public void startProgram() {
         final int CREATE = 1;
         final int EXIT = 9;
         final int VIEW = 2;
@@ -51,13 +51,13 @@ public class UserInterface {
                     year = "0";
                 }
                 int yearCreated;
-            try{
-                 yearCreated = Integer.parseInt(year);
-            } catch (NumberFormatException e) {
-                System.out.println("Must input a number!");
-                System.out.println("Defaulted to year 0.");
-                yearCreated = 0;
-            }
+                try {
+                    yearCreated = Integer.parseInt(year);
+                } catch (NumberFormatException e) {
+                    System.out.println("Must input a number!");
+                    System.out.println("Defaulted to year 0.");
+                    yearCreated = 0;
+                }
 
                 System.out.println("Is hero a human: ");
                 String isHuman = sc.next();
@@ -73,7 +73,7 @@ public class UserInterface {
                 double strength;
                 try {
                     strength = Double.parseDouble(strengthValue);
-                }catch (NumberFormatException e) {
+                } catch (NumberFormatException e) {
                     System.out.println("Must input a number!");
                     System.out.println("Defaulted to strength value of 1.");
                     strength = 1;
